@@ -26,6 +26,12 @@ services:
     # Expose api on port 8080 (localhost only)
     # Please read the https://www.freqtrade.io/en/stable/rest-api/ documentation
     # for more information.
+    # load environment variables from Shell
+    environment:
+      - FREQTRADE__TELEGRAM__CHAT_ID
+      - FREQTRADE__TELEGRAM__TOKEN
+      - FREQTRADE__EXCHANGE__KEY
+      - FREQTRADE__EXCHANGE__SECRET
     ports:
       - "127.0.0.1:8080:8080"
     # Default command used when running `docker compose up`
